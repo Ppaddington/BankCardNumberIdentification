@@ -1,0 +1,2 @@
+model_checkpoint_path: "F:\\\350\265\204\346\226\231\344\270\213\350\275\275\\cnn_model\\cnn_model.ckpt"
+all_model_checkpoint_paths: "F:\\\350\265\204\346\226\231\344\270\213\350\275\275\\cnn_model\\cnn_model.ckpt"
