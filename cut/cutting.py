@@ -38,7 +38,6 @@ def point(x0, y0, x1, y1, x2, y2, x3, y3):
 # image = cv2.imread(args["image"])
 # url = identification.views.img_url()
 def NumRes(url):
-    print("dafsdads")
     print(sys.path)
     image = cv2.imread(url)
 
@@ -118,41 +117,3 @@ def NumRes(url):
 
     NumList = result.run(cut_img)#cut_img需要是一个地址(url)
     return NumList
-#
-#
-#
-# #滤波
-# lured1 = cv2.blur(cut_img,(5,5))
-# cv2.imshow('lured1',lured1)
-# cv2.waitKey(0)
-#
-# #####背景处理########
-# ##########RGB转灰度图或YUV图#################
-# # image_yuv = cv2.cvtColor(cut_img,cv2.COLOR_BGR2YUV)
-# # # cv2.imshow('YUV',image_yuv)
-#
-# ##########RGB转灰度图或灰度图#################
-# # image_gray = cv2.cvtColor(cut_img,cv2.COLOR_BGR2GRAY)
-# image_gray = cv2.cvtColor(lured1,cv2.COLOR_BGR2GRAY)
-# cv2.imshow('GRAY',image_gray)
-# cv2.waitKey(0)
-#
-# #二值化
-# # th = cv2.adaptiveThreshold(image_gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,11,2)
-# th = cv2.adaptiveThreshold(image_gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
-# cv2.imshow('AdaptiveThreshold',th)
-# cv2.waitKey(0)
-#
-# #膨胀
-# kernel = cv2.getStructuringElement(cv2.MORPH_RECT,(3, 3))
-# #膨胀图像
-# dilated = cv2.dilate(th,kernel)
-# cv2.imshow("Dilated Image",dilated)#效果很好
-# cv2.waitKey(0)
-#
-# # canny(): 边缘检测
-# img = cv2.GaussianBlur(dilated, (3, 3), 0)
-# canny = cv2.Canny(img, 80, 240)#一般设定为低阈值的3倍 (根据Canny算法的推荐)
-# cv2.imshow('dilatedCanny', canny)#效果很好
-#
-# cv2.waitKey(0)
